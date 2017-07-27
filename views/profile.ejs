@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Bank of Sam</title>
+
+        <script src="jquery-3.2.1.js"></script>
+        <script src="/assets/BankModel.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css">
+
+    </head>
+
+    <body>
+        <div id="profile-top">
+            <h1 class="large-text">Hello, <%= account.firstname%></h1>
+        </div>
+
+        <% if (account.balance === 0.0) { %>
+            <% var message = "Withdrew all remaining funds from account"; %>
+        <% } else { %>
+            <% var message = ""; } %>
+        <div id="account-info">
+            <h2>Balance: $<%= account.balance.toFixed(2) %></h2>
+            <p><%= message %></p>
+        </div>
+
+
+        <form action="/update" method="POST">
+            <input type="hidden" name="firstname" value=<%=account.firstname%> >
+            <input type="hidden" name="lastname" value=<%=account.lastname%> >
+            <input type="hidden" name="balance" value=<%=account.balance%> >
+
+            <select name="transactiontype">
+                <option name="deposit" value="deposit">Deposit</option>
+                <option name="withdraw" value="withdraw">Withdraw</option>
+            </select>
+            <label for "amount">Amount<label>
+            <input type="text" name = "amount" value = "">
+            <input type="submit" value ="submit"/>
+        </form>
+
+
+        <br><br>
+        <a href="/>"<button id="logout" type="button">Log Out</button></a>
+
+
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Bank of Sam</title>
+
+        <script src="jquery-3.2.1.js"></script>
+        <script src="/assets/BankModel.js"></script>
+
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+    <body>
+        <div id="welcome">
+            <h1 class="large-text">Welcome to the Bank of Sam!</h1>
+        <div>
+        <h2>Please log in</h2>
+        <form action = "/login" method = "POST">
+            <label for "firstname">First Name<label>
+            <input type = "text" name = "firstname" value = ""><br>
+            <label for = "lastname">Last Name</label>
+            <input type = "text" name = "lastname" value = "">
+            <input type = "submit" value = "submit"/>
+        </form>
+
+        <div id="login-error">
+            <p><%= status %></p>
+        </div>
+        <a href = "/signup">No account? Sign up!</a>
+    </body>
+</html>

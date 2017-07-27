@@ -1,0 +1,42 @@
+
+
+
+#signup-error, #login-error {
+    height: 25px;
+}
+
+#profile-top {
+    background-image: url("/images/Nassau.jpg");
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+#account-info {
+    background-color: #77A1F0;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+#welcome {
+    background-image: url("/images/PrincetonFall1.jpg");
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+#signup-top {
+    background-image: url("/images/PrincetonSunset.jpg");
+    height: 400px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.large-text {
+    text-align: center;
+    line-height: 400px;
+    font-size: 80px;
+    color: #ffffff;
+}
